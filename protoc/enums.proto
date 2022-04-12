@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package google_flights;
+
+enum FlightClass {
+    FLIGHT_CLASS_UNSPECIFIED = 0;
+    FLIGHT_CLASS_ECONOMY = 1;
+    FLIGHT_CLASS_PREMIUM_ECONOMY = 2;
+    FLIGHT_CLASS_BUSINESS = 3;
+    FLIGHT_CLASS_FIRST = 4;
+}
+
+enum FlightOnly {
+    FLIGHT_ONLY_UNSPECIFIED = 0;
+    FLIGHT_ONLY_YES = 1;
+}
+
+enum Stops {
+    STOPS_ANY = 0;
+    STOPS_NON_STOP = 1;
+    STOPS_ONE_OR_LESS = 2;
+    STOPS_TWO_OR_LESS = 3;
+}
