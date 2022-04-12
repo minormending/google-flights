@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package google_flights;
+
+import "nullable.proto";
+import "enums.proto";
+import "utils.proto";
+
+message InOutBoundSettings {
+    FlightSettings outbound = 1;
+    FlightSettings inbound = 2;
+
+}
+
+message FlightSettings {
+    message Inner1 {
+        message Inner1_1 {
+            message Inner1_1_1 {
+                string airport = 1;
+                int32 two = 2;
+            }
+
+            Inner1_1_1 one = 1;
+        }
+
+        Inner1_1 one = 1;
+    }
+    Inner1 airport = 1;
+    Stops stops = 4;
+    EmptyMessage five = 5;
+    EmptyMessage six = 6;
+    string date = 7;
+    Duration duration = 8;
+    EmptyMessage nine = 9;
+    EmptyMessage ten = 10;
+    EmptyMessage eleven = 11;
+    EmptyMessage fourteen = 14;
+}
+
+message Duration {
+    int32 max_flight_duration = 1;
+}

@@ -13,25 +13,26 @@ _sym_db = _symbol_database.Default()
 
 import nullable_pb2 as nullable__pb2
 import enums_pb2 as enums__pb2
+import utils_pb2 as utils__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10inoutbound.proto\x12\x0egoogle_flights\x1a\x0enullable.proto\x1a\x0b\x65nums.proto\"w\n\x12InOutBoundSettings\x12\x30\n\x08outbound\x18\x01 \x01(\x0b\x32\x1e.google_flights.FlightSettings\x12/\n\x07inbound\x18\x02 \x01(\x0b\x32\x1e.google_flights.FlightSettings\"\xf0\x02\n\x0e\x46lightSettings\x12\x36\n\x07\x61irport\x18\x01 \x01(\x0b\x32%.google_flights.FlightSettings.Inner1\x12$\n\x05stops\x18\x04 \x01(\x0e\x32\x15.google_flights.Stops\x12\x0c\n\x04\x64\x61te\x18\x07 \x01(\t\x12*\n\x08\x64uration\x18\x08 \x01(\x0b\x32\x18.google_flights.Duration\x1a\xc5\x01\n\x06Inner1\x12;\n\x03one\x18\x01 \x01(\x0b\x32..google_flights.FlightSettings.Inner1.Inner1_1\x1a~\n\x08Inner1_1\x12\x46\n\x03one\x18\x01 \x01(\x0b\x32\x39.google_flights.FlightSettings.Inner1.Inner1_1.Inner1_1_1\x1a*\n\nInner1_1_1\x12\x0f\n\x07\x61irport\x18\x01 \x01(\t\x12\x0b\n\x03two\x18\x02 \x01(\x05\"\'\n\x08\x44uration\x12\x1b\n\x13max_flight_duration\x18\x01 \x01(\x05\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10inoutbound.proto\x12\x0egoogle_flights\x1a\x0enullable.proto\x1a\x0b\x65nums.proto\x1a\x0butils.proto\"w\n\x12InOutBoundSettings\x12\x30\n\x08outbound\x18\x01 \x01(\x0b\x32\x1e.google_flights.FlightSettings\x12/\n\x07inbound\x18\x02 \x01(\x0b\x32\x1e.google_flights.FlightSettings\"\xfc\x04\n\x0e\x46lightSettings\x12\x36\n\x07\x61irport\x18\x01 \x01(\x0b\x32%.google_flights.FlightSettings.Inner1\x12$\n\x05stops\x18\x04 \x01(\x0e\x32\x15.google_flights.Stops\x12*\n\x04\x66ive\x18\x05 \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12)\n\x03six\x18\x06 \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12\x0c\n\x04\x64\x61te\x18\x07 \x01(\t\x12*\n\x08\x64uration\x18\x08 \x01(\x0b\x32\x18.google_flights.Duration\x12*\n\x04nine\x18\t \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12)\n\x03ten\x18\n \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12,\n\x06\x65leven\x18\x0b \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12.\n\x08\x66ourteen\x18\x0e \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x1a\xc5\x01\n\x06Inner1\x12;\n\x03one\x18\x01 \x01(\x0b\x32..google_flights.FlightSettings.Inner1.Inner1_1\x1a~\n\x08Inner1_1\x12\x46\n\x03one\x18\x01 \x01(\x0b\x32\x39.google_flights.FlightSettings.Inner1.Inner1_1.Inner1_1_1\x1a*\n\nInner1_1_1\x12\x0f\n\x07\x61irport\x18\x01 \x01(\t\x12\x0b\n\x03two\x18\x02 \x01(\x05\"\'\n\x08\x44uration\x12\x1b\n\x13max_flight_duration\x18\x01 \x01(\x05\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'inoutbound_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  _INOUTBOUNDSETTINGS._serialized_start=65
-  _INOUTBOUNDSETTINGS._serialized_end=184
-  _FLIGHTSETTINGS._serialized_start=187
-  _FLIGHTSETTINGS._serialized_end=555
-  _FLIGHTSETTINGS_INNER1._serialized_start=358
-  _FLIGHTSETTINGS_INNER1._serialized_end=555
-  _FLIGHTSETTINGS_INNER1_INNER1_1._serialized_start=429
-  _FLIGHTSETTINGS_INNER1_INNER1_1._serialized_end=555
-  _FLIGHTSETTINGS_INNER1_INNER1_1_INNER1_1_1._serialized_start=513
-  _FLIGHTSETTINGS_INNER1_INNER1_1_INNER1_1_1._serialized_end=555
-  _DURATION._serialized_start=557
-  _DURATION._serialized_end=596
+  _INOUTBOUNDSETTINGS._serialized_start=78
+  _INOUTBOUNDSETTINGS._serialized_end=197
+  _FLIGHTSETTINGS._serialized_start=200
+  _FLIGHTSETTINGS._serialized_end=836
+  _FLIGHTSETTINGS_INNER1._serialized_start=639
+  _FLIGHTSETTINGS_INNER1._serialized_end=836
+  _FLIGHTSETTINGS_INNER1_INNER1_1._serialized_start=710
+  _FLIGHTSETTINGS_INNER1_INNER1_1._serialized_end=836
+  _FLIGHTSETTINGS_INNER1_INNER1_1_INNER1_1_1._serialized_start=794
+  _FLIGHTSETTINGS_INNER1_INNER1_1_INNER1_1_1._serialized_end=836
+  _DURATION._serialized_start=838
+  _DURATION._serialized_end=877
 # @@protoc_insertion_point(module_scope)

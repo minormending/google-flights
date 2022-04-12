@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x65nums.proto\x12\x0egoogle_flights*\x9a\x01\n\x0b\x46lightClass\x12\x1c\n\x18\x46LIGHT_CLASS_UNSPECIFIED\x10\x00\x12\x18\n\x14\x46LIGHT_CLASS_ECONOMY\x10\x01\x12 \n\x1c\x46LIGHT_CLASS_PREMIUM_ECONOMY\x10\x02\x12\x19\n\x15\x46LIGHT_CLASS_BUSINESS\x10\x03\x12\x16\n\x12\x46LIGHT_CLASS_FIRST\x10\x04*>\n\nFlightOnly\x12\x1b\n\x17\x46LIGHT_ONLY_UNSPECIFIED\x10\x00\x12\x13\n\x0f\x46LIGHT_ONLY_YES\x10\x01*X\n\x05Stops\x12\r\n\tSTOPS_ANY\x10\x00\x12\x12\n\x0eSTOPS_NON_STOP\x10\x01\x12\x15\n\x11STOPS_ONE_OR_LESS\x10\x02\x12\x15\n\x11STOPS_TWO_OR_LESS\x10\x03\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x0b\x65nums.proto\x12\x0egoogle_flights*\x9a\x01\n\x0b\x46lightClass\x12\x1c\n\x18\x46LIGHT_CLASS_UNSPECIFIED\x10\x00\x12\x18\n\x14\x46LIGHT_CLASS_ECONOMY\x10\x01\x12 \n\x1c\x46LIGHT_CLASS_PREMIUM_ECONOMY\x10\x02\x12\x19\n\x15\x46LIGHT_CLASS_BUSINESS\x10\x03\x12\x16\n\x12\x46LIGHT_CLASS_FIRST\x10\x04*>\n\nFlightOnly\x12\x1b\n\x17\x46LIGHT_ONLY_UNSPECIFIED\x10\x00\x12\x13\n\x0f\x46LIGHT_ONLY_YES\x10\x01*X\n\x05Stops\x12\r\n\tSTOPS_ANY\x10\x00\x12\x12\n\x0eSTOPS_NON_STOP\x10\x01\x12\x15\n\x11STOPS_ONE_OR_LESS\x10\x02\x12\x15\n\x11STOPS_TWO_OR_LESS\x10\x03*d\n\x08TripDate\x12\x14\n\x10TRIP_DATE_UNUSED\x10\x00\x12\x15\n\x11TRIP_DATE_WEEKEND\x10\x01\x12\x14\n\x10TRIP_DATE_1_WEEK\x10\x02\x12\x15\n\x11TRIP_DATE_2_WEEKS\x10\x03\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'enums_pb2', globals())
@@ -26,4 +26,6 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _FLIGHTONLY._serialized_end=250
   _STOPS._serialized_start=252
   _STOPS._serialized_end=340
+  _TRIPDATE._serialized_start=342
+  _TRIPDATE._serialized_end=442
 # @@protoc_insertion_point(module_scope)

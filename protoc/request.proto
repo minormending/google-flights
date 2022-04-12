@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package google_flights;
+
+import "nullable.proto";
+import "settings.proto";
+
+message RequestWrapper {
+    string payload = 2;
+}
+
+message Request {
+    FlightEstimateOne one = 1;
+    MapBounds bounds = 2;
+    Settings settings = 4;
+    int32 six = 6;
+    bool eight = 8;
+    bool ten = 10;
+    int32 twelve = 12;
+
+    message FlightEstimateOne {
+        int32 one = 1  [(nullable) = '0'];
+        int32 two = 2  [(nullable) = '0'];
+    }
+}
+
+message MapBounds {
+    Coordintate top_left = 1;
+    Coordintate bottom_right = 2;
+}
+
+message Coordintate {
+    double latitude = 1;
+    double longitude = 2;
+}

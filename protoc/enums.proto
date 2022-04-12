@@ -21,3 +21,10 @@ enum Stops {
     STOPS_ONE_OR_LESS = 2;
     STOPS_TWO_OR_LESS = 3;
 }
+
+enum TripDate {
+    TRIP_DATE_UNUSED = 0;
+    TRIP_DATE_WEEKEND = 1;
+    TRIP_DATE_1_WEEK = 2;
+    TRIP_DATE_2_WEEKS = 3;
+}

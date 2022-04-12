@@ -15,7 +15,7 @@ import nullable_pb2 as nullable__pb2
 import settings_pb2 as settings__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rrequest.proto\x12\x0egoogle_flights\x1a\x0enullable.proto\x1a\x0esettings.proto\"!\n\x0eRequestWrapper\x12\x0f\n\x07payload\x18\x02 \x01(\t\"\x8f\x02\n\x07Request\x12\x36\n\x03one\x18\x01 \x01(\x0b\x32).google_flights.Request.FlightEstimateOne\x12)\n\x06\x62ounds\x18\x02 \x01(\x0b\x32\x19.google_flights.MapBounds\x12*\n\x08settings\x18\x04 \x01(\x0b\x32\x18.google_flights.Settings\x12\x0b\n\x03six\x18\x06 \x01(\x05\x12\r\n\x05\x65ight\x18\x08 \x01(\x08\x12\x0b\n\x03ten\x18\n \x01(\x08\x12\x0f\n\x07\x65levens\x18\x0b \x03(\x05\x1a;\n\x11\x46lightEstimateOne\x12\x12\n\x03one\x18\x01 \x01(\x05\x42\x05\xda\xb6\x18\x01\x30\x12\x12\n\x03two\x18\x02 \x01(\x05\x42\x05\xda\xb6\x18\x01\x30\"m\n\tMapBounds\x12-\n\x08top_left\x18\x01 \x01(\x0b\x32\x1b.google_flights.Coordintate\x12\x31\n\x0c\x62ottom_right\x18\x02 \x01(\x0b\x32\x1b.google_flights.Coordintate\"2\n\x0b\x43oordintate\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\rrequest.proto\x12\x0egoogle_flights\x1a\x0enullable.proto\x1a\x0esettings.proto\"!\n\x0eRequestWrapper\x12\x0f\n\x07payload\x18\x02 \x01(\t\"\x8e\x02\n\x07Request\x12\x36\n\x03one\x18\x01 \x01(\x0b\x32).google_flights.Request.FlightEstimateOne\x12)\n\x06\x62ounds\x18\x02 \x01(\x0b\x32\x19.google_flights.MapBounds\x12*\n\x08settings\x18\x04 \x01(\x0b\x32\x18.google_flights.Settings\x12\x0b\n\x03six\x18\x06 \x01(\x05\x12\r\n\x05\x65ight\x18\x08 \x01(\x08\x12\x0b\n\x03ten\x18\n \x01(\x08\x12\x0e\n\x06twelve\x18\x0c \x01(\x05\x1a;\n\x11\x46lightEstimateOne\x12\x12\n\x03one\x18\x01 \x01(\x05\x42\x05\xda\xb6\x18\x01\x30\x12\x12\n\x03two\x18\x02 \x01(\x05\x42\x05\xda\xb6\x18\x01\x30\"m\n\tMapBounds\x12-\n\x08top_left\x18\x01 \x01(\x0b\x32\x1b.google_flights.Coordintate\x12\x31\n\x0c\x62ottom_right\x18\x02 \x01(\x0b\x32\x1b.google_flights.Coordintate\"2\n\x0b\x43oordintate\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'request_pb2', globals())
@@ -29,11 +29,11 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _REQUESTWRAPPER._serialized_start=65
   _REQUESTWRAPPER._serialized_end=98
   _REQUEST._serialized_start=101
-  _REQUEST._serialized_end=372
-  _REQUEST_FLIGHTESTIMATEONE._serialized_start=313
-  _REQUEST_FLIGHTESTIMATEONE._serialized_end=372
-  _MAPBOUNDS._serialized_start=374
-  _MAPBOUNDS._serialized_end=483
-  _COORDINTATE._serialized_start=485
-  _COORDINTATE._serialized_end=535
+  _REQUEST._serialized_end=371
+  _REQUEST_FLIGHTESTIMATEONE._serialized_start=312
+  _REQUEST_FLIGHTESTIMATEONE._serialized_end=371
+  _MAPBOUNDS._serialized_start=373
+  _MAPBOUNDS._serialized_end=482
+  _COORDINTATE._serialized_start=484
+  _COORDINTATE._serialized_end=534
 # @@protoc_insertion_point(module_scope)
