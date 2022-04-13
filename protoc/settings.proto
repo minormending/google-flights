@@ -7,9 +7,9 @@ import "enums.proto";
 import "inoutbound.proto";
 
 message Settings {
-    int32 three = 3;
+    int32 three = 3; // maybe 1 = roundtrip, 2 = one way
 
-    DateOptions date_options = 5;
+    DateOptions date_options = 5 [(nullable) = ''];
     FlightClass flight_class = 6; // 1 = economy, 2 = premium economy 
     Passengers passengers = 7;
     optional PriceBounds price_bounds = 8;
@@ -17,7 +17,7 @@ message Settings {
     InOutBoundSettings inout_bound_settings = 14;
 
 
-    FlightOnly flights_only = 26; // 1 = flights only 
+    FlightOnly flights_only = 26 [(nullable) = '0'];
 }
 
 message DateOptions {

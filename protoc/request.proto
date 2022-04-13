@@ -33,3 +33,11 @@ message Coordintate {
     double latitude = 1;
     double longitude = 2;
 }
+
+
+message SearchRequest {
+    Settings settings = 2;
+    int32 three = 3;
+    bool four = 4;
+    bool five = 5;
+}

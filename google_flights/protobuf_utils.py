@@ -9,7 +9,7 @@ def print_arr(arr):
 
 
 wrapper = json.loads(raw)
-print("wrapper:")
+print("request wrapper:")
 print_arr(wrapper)
 
 request = json.loads(wrapper[1])
@@ -20,46 +20,46 @@ print("\nsettings:")
 print_arr(request[3])
 
 
-print("\nsettings fields:")
+print("\ninoutbound settings:")
 print_arr(request[3][13])
 
 print("\noutbound fields:")
 print_arr(request[3][13][0])
 
-import flights_pb2
-a = flights_pb2.FlightEstimate()
+import request_pb2 as proto_request
+import enums_pb2 as proto_enums
+
+a = proto_request.Request()
 a.bounds.top_left.latitude = 85
 a.bounds.top_left.longitude = 180
 a.bounds.bottom_right.latitude = -85
 a.bounds.bottom_right.longitude = -180
-a.settings.flight_class = flights_pb2.FlightClass.FLIGHT_CLASS_ECONOMY
-a.settings.passengers.adults = 1
-a.settings.price_bounds.high = 500
-a.settings.bags.carry_on_bags = 1
-a.settings.inout_bound_settings.outbound.stops = flights_pb2.Stops.STOPS_NON_STOP
+a.settings.three = 1
+a.settings.flight_class = proto_enums.FlightClass.FLIGHT_CLASS_ECONOMY
+a.settings.date_options.month = 4 # april
+a.settings.date_options.trip_date = proto_enums.TripDate.TRIP_DATE_2_WEEKS
+a.settings.passengers.adults = 4
+a.settings.passengers.children = 3
+a.settings.passengers.infants_in_seat = 2
+a.settings.price_bounds.high = 7500
+a.settings.bags.carry_on_bags = 5
+a.settings.inout_bound_settings.outbound.airport.one.one.airport = 'JFK'
+a.settings.inout_bound_settings.outbound.stops = proto_enums.Stops.STOPS_ONE_OR_LESS
 a.settings.inout_bound_settings.outbound.date = '2022-06-02'
-a.settings.inout_bound_settings.outbound.duration.max_flight_duration = 12 * 60
-a.settings.inout_bound_settings.inbound.stops = 1
+a.settings.inout_bound_settings.outbound.duration.max_flight_duration = 1260
+a.settings.inout_bound_settings.inbound.stops = proto_enums.Stops.STOPS_ONE_OR_LESS
 a.settings.inout_bound_settings.inbound.date = '2022-06-06'
-a.settings.inout_bound_settings.inbound.duration.max_flight_duration = 12 * 60
-a.settings.flights_only = flights_pb2.FlightOnly.FLIGHT_ONLY_YES
-print(a)
+a.settings.inout_bound_settings.inbound.duration.max_flight_duration = 1260
+a.settings.flights_only = proto_enums.FlightOnly.FLIGHT_ONLY_YES
+#print(a)
 
-def protobuf2array(obj):
-    result = []
-    for field in obj.DESCRIPTOR.fields:
-        val, pos = getattr(obj, field.name), field.number - 1
-        while pos > len(result):
-            # fill array for not implemented message properties
-            result.append(None)
-        
-        if field.type == field.TYPE_MESSAGE:
-            val = protobuf2array(val)
-        
-        result.append(val)
-    print(obj.DESCRIPTOR.name, "result:", result)
-    return result
+from protobuf2arr import serialize_msg2arr
+from protobuf2arr.serializer import msg_to_arr
 
-from pprint import pprint
-#pprint([(i.name, i.number) for i in a.DESCRIPTOR.fields])
-protobuf2array(a)
+w = proto_request.RequestWrapper()
+w.payload = serialize_msg2arr(a)
+final = serialize_msg2arr(w)
+print("\nfinal:")
+print(final)
+print("original:")
+print(raw)

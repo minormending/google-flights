@@ -13,30 +13,39 @@ message InOutBoundSettings {
 }
 
 message FlightSettings {
-    message Inner1 {
-        message Inner1_1 {
-            message Inner1_1_1 {
+    message AirportContainer {
+        message AirportContainerInner {
+            message AirportContainerInnerInfo {
                 string airport = 1;
                 int32 two = 2;
             }
-
-            Inner1_1_1 one = 1;
+            AirportContainerInnerInfo one = 1;
         }
-
-        Inner1_1 one = 1;
+        AirportContainerInner one = 1;
     }
-    Inner1 airport = 1;
+
+    AirportContainer source = 1;
+    AirportContainer destination = 2 [(nullable) = ''];
+    DepartureArrivalLimit times = 3 [(nullable) = ''];
     Stops stops = 4;
     EmptyMessage five = 5;
-    EmptyMessage six = 6;
+    repeated string ignore_airlines = 6;
     string date = 7;
-    Duration duration = 8;
+    Duration flight_duration = 8;
     EmptyMessage nine = 9;
     EmptyMessage ten = 10;
     EmptyMessage eleven = 11;
+    int32 layover_max_minutes = 13 [(nullable) = '0'];
     EmptyMessage fourteen = 14;
 }
 
 message Duration {
-    int32 max_flight_duration = 1;
+    int32 max_minutes = 1;
+}
+
+message DepartureArrivalLimit {
+    int32 departure_hour_min = 1;
+    int32 departure_hour_max = 2; // value is 1 minus the time
+    int32 arrival_hour_min = 3;
+    int32 arrival_hour_max = 4; // value is 1 minus the time
 }
