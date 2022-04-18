@@ -31,7 +31,7 @@ message FlightSettings {
     EmptyMessage five = 5;
     repeated string ignore_airlines = 6;
     string date = 7;
-    Duration flight_duration = 8;
+    Duration flight_duration = 8 [(nullable) = ''];
     EmptyMessage nine = 9;
     EmptyMessage ten = 10;
     EmptyMessage eleven = 11;

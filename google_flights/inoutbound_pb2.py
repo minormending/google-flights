@@ -16,7 +16,7 @@ import enums_pb2 as enums__pb2
 import utils_pb2 as utils__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10inoutbound.proto\x12\x0egoogle_flights\x1a\x0enullable.proto\x1a\x0b\x65nums.proto\x1a\x0butils.proto\"w\n\x12InOutBoundSettings\x12\x30\n\x08outbound\x18\x01 \x01(\x0b\x32\x1e.google_flights.FlightSettings\x12/\n\x07inbound\x18\x02 \x01(\x0b\x32\x1e.google_flights.FlightSettings\"\x8a\x07\n\x0e\x46lightSettings\x12?\n\x06source\x18\x01 \x01(\x0b\x32/.google_flights.FlightSettings.AirportContainer\x12J\n\x0b\x64\x65stination\x18\x02 \x01(\x0b\x32/.google_flights.FlightSettings.AirportContainerB\x04\xda\xb6\x18\x00\x12:\n\x05times\x18\x03 \x01(\x0b\x32%.google_flights.DepartureArrivalLimitB\x04\xda\xb6\x18\x00\x12$\n\x05stops\x18\x04 \x01(\x0e\x32\x15.google_flights.Stops\x12*\n\x04\x66ive\x18\x05 \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12\x17\n\x0fignore_airlines\x18\x06 \x03(\t\x12\x0c\n\x04\x64\x61te\x18\x07 \x01(\t\x12\x31\n\x0f\x66light_duration\x18\x08 \x01(\x0b\x32\x18.google_flights.Duration\x12*\n\x04nine\x18\t \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12)\n\x03ten\x18\n \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12,\n\x06\x65leven\x18\x0b \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12\"\n\x13layover_max_minutes\x18\r \x01(\x05\x42\x05\xda\xb6\x18\x01\x30\x12.\n\x08\x66ourteen\x18\x0e \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x1a\xa9\x02\n\x10\x41irportContainer\x12R\n\x03one\x18\x01 \x01(\x0b\x32\x45.google_flights.FlightSettings.AirportContainer.AirportContainerInner\x1a\xc0\x01\n\x15\x41irportContainerInner\x12l\n\x03one\x18\x01 \x01(\x0b\x32_.google_flights.FlightSettings.AirportContainer.AirportContainerInner.AirportContainerInnerInfo\x1a\x39\n\x19\x41irportContainerInnerInfo\x12\x0f\n\x07\x61irport\x18\x01 \x01(\t\x12\x0b\n\x03two\x18\x02 \x01(\x05\"\x1f\n\x08\x44uration\x12\x13\n\x0bmax_minutes\x18\x01 \x01(\x05\"\x83\x01\n\x15\x44\x65partureArrivalLimit\x12\x1a\n\x12\x64\x65parture_hour_min\x18\x01 \x01(\x05\x12\x1a\n\x12\x64\x65parture_hour_max\x18\x02 \x01(\x05\x12\x18\n\x10\x61rrival_hour_min\x18\x03 \x01(\x05\x12\x18\n\x10\x61rrival_hour_max\x18\x04 \x01(\x05\x62\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10inoutbound.proto\x12\x0egoogle_flights\x1a\x0enullable.proto\x1a\x0b\x65nums.proto\x1a\x0butils.proto\"w\n\x12InOutBoundSettings\x12\x30\n\x08outbound\x18\x01 \x01(\x0b\x32\x1e.google_flights.FlightSettings\x12/\n\x07inbound\x18\x02 \x01(\x0b\x32\x1e.google_flights.FlightSettings\"\x90\x07\n\x0e\x46lightSettings\x12?\n\x06source\x18\x01 \x01(\x0b\x32/.google_flights.FlightSettings.AirportContainer\x12J\n\x0b\x64\x65stination\x18\x02 \x01(\x0b\x32/.google_flights.FlightSettings.AirportContainerB\x04\xda\xb6\x18\x00\x12:\n\x05times\x18\x03 \x01(\x0b\x32%.google_flights.DepartureArrivalLimitB\x04\xda\xb6\x18\x00\x12$\n\x05stops\x18\x04 \x01(\x0e\x32\x15.google_flights.Stops\x12*\n\x04\x66ive\x18\x05 \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12\x17\n\x0fignore_airlines\x18\x06 \x03(\t\x12\x0c\n\x04\x64\x61te\x18\x07 \x01(\t\x12\x37\n\x0f\x66light_duration\x18\x08 \x01(\x0b\x32\x18.google_flights.DurationB\x04\xda\xb6\x18\x00\x12*\n\x04nine\x18\t \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12)\n\x03ten\x18\n \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12,\n\x06\x65leven\x18\x0b \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x12\"\n\x13layover_max_minutes\x18\r \x01(\x05\x42\x05\xda\xb6\x18\x01\x30\x12.\n\x08\x66ourteen\x18\x0e \x01(\x0b\x32\x1c.google_flights.EmptyMessage\x1a\xa9\x02\n\x10\x41irportContainer\x12R\n\x03one\x18\x01 \x01(\x0b\x32\x45.google_flights.FlightSettings.AirportContainer.AirportContainerInner\x1a\xc0\x01\n\x15\x41irportContainerInner\x12l\n\x03one\x18\x01 \x01(\x0b\x32_.google_flights.FlightSettings.AirportContainer.AirportContainerInner.AirportContainerInnerInfo\x1a\x39\n\x19\x41irportContainerInnerInfo\x12\x0f\n\x07\x61irport\x18\x01 \x01(\t\x12\x0b\n\x03two\x18\x02 \x01(\x05\"\x1f\n\x08\x44uration\x12\x13\n\x0bmax_minutes\x18\x01 \x01(\x05\"\x83\x01\n\x15\x44\x65partureArrivalLimit\x12\x1a\n\x12\x64\x65parture_hour_min\x18\x01 \x01(\x05\x12\x1a\n\x12\x64\x65parture_hour_max\x18\x02 \x01(\x05\x12\x18\n\x10\x61rrival_hour_min\x18\x03 \x01(\x05\x12\x18\n\x10\x61rrival_hour_max\x18\x04 \x01(\x05\x62\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'inoutbound_pb2', globals())
@@ -27,20 +27,22 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _FLIGHTSETTINGS.fields_by_name['destination']._serialized_options = b'\332\266\030\000'
   _FLIGHTSETTINGS.fields_by_name['times']._options = None
   _FLIGHTSETTINGS.fields_by_name['times']._serialized_options = b'\332\266\030\000'
+  _FLIGHTSETTINGS.fields_by_name['flight_duration']._options = None
+  _FLIGHTSETTINGS.fields_by_name['flight_duration']._serialized_options = b'\332\266\030\000'
   _FLIGHTSETTINGS.fields_by_name['layover_max_minutes']._options = None
   _FLIGHTSETTINGS.fields_by_name['layover_max_minutes']._serialized_options = b'\332\266\030\0010'
   _INOUTBOUNDSETTINGS._serialized_start=78
   _INOUTBOUNDSETTINGS._serialized_end=197
   _FLIGHTSETTINGS._serialized_start=200
-  _FLIGHTSETTINGS._serialized_end=1106
-  _FLIGHTSETTINGS_AIRPORTCONTAINER._serialized_start=809
-  _FLIGHTSETTINGS_AIRPORTCONTAINER._serialized_end=1106
-  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER._serialized_start=914
-  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER._serialized_end=1106
-  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER_AIRPORTCONTAINERINNERINFO._serialized_start=1049
-  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER_AIRPORTCONTAINERINNERINFO._serialized_end=1106
-  _DURATION._serialized_start=1108
-  _DURATION._serialized_end=1139
-  _DEPARTUREARRIVALLIMIT._serialized_start=1142
-  _DEPARTUREARRIVALLIMIT._serialized_end=1273
+  _FLIGHTSETTINGS._serialized_end=1112
+  _FLIGHTSETTINGS_AIRPORTCONTAINER._serialized_start=815
+  _FLIGHTSETTINGS_AIRPORTCONTAINER._serialized_end=1112
+  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER._serialized_start=920
+  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER._serialized_end=1112
+  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER_AIRPORTCONTAINERINNERINFO._serialized_start=1055
+  _FLIGHTSETTINGS_AIRPORTCONTAINER_AIRPORTCONTAINERINNER_AIRPORTCONTAINERINNERINFO._serialized_end=1112
+  _DURATION._serialized_start=1114
+  _DURATION._serialized_end=1145
+  _DEPARTUREARRIVALLIMIT._serialized_start=1148
+  _DEPARTUREARRIVALLIMIT._serialized_end=1279
 # @@protoc_insertion_point(module_scope)
