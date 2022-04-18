@@ -59,7 +59,7 @@ class GoogleFlights:
         
         wrapper = proto_request.RequestWrapper()
         wrapper.payload = serialize_msg2arr(request)
-        resp = self._make_request(wrapper)
+        resp = self._make_request_explore(wrapper)
         return resp.text
 
     def search(self) -> str:
@@ -72,15 +72,15 @@ class GoogleFlights:
 
         request.settings.inout_bound_settings.outbound.source.one.one.airport = 'JFK'
         request.settings.inout_bound_settings.outbound.destination.one.one.airport = 'LIS'
-        request.settings.inout_bound_settings.outbound.stops = proto_enums.Stops.STOPS_ONE_OR_LESS
+        request.settings.inout_bound_settings.outbound.stops = proto_enums.Stops.STOPS_NON_STOP
         request.settings.inout_bound_settings.outbound.date = '2022-07-14'
-        request.settings.inout_bound_settings.outbound.flight_duration.max_minutes = 12 * 60
+        #request.settings.inout_bound_settings.outbound.flight_duration.max_minutes = 12 * 60
         
-        request.settings.inout_bound_settings.inbound.source.one.one.airport = 'JFK'
-        request.settings.inout_bound_settings.inbound.destination.one.one.airport = 'LIS'
-        request.settings.inout_bound_settings.inbound.stops = proto_enums.Stops.STOPS_ONE_OR_LESS
+        request.settings.inout_bound_settings.inbound.source.one.one.airport = 'LIS'
+        request.settings.inout_bound_settings.inbound.destination.one.one.airport = 'JFK'
+        request.settings.inout_bound_settings.inbound.stops = proto_enums.Stops.STOPS_NON_STOP
         request.settings.inout_bound_settings.inbound.date = '2022-07-18'
-        request.settings.inout_bound_settings.inbound.flight_duration.max_minutes = 12 * 60
+        #request.settings.inout_bound_settings.inbound.flight_duration.max_minutes = 12 * 60
         
         wrapper = proto_request.RequestWrapper()
         arr = msg_to_arr(request)
@@ -90,14 +90,14 @@ class GoogleFlights:
                     print_arr(i, spaces + str(idx + 1) + " : \t")
                 else:
                     print(spaces + str(idx + 1) + " :", type(i), ":", i)
-        print_arr(arr, "")
-
+        #print_arr(arr, "")
+        print(str(request.settings.date_options))
         wrapper.payload = serialize_msg2arr(request)
-        resp = self._make_request(wrapper)
+        resp = self._make_request_search(wrapper)
         return resp.text
 
 if __name__ == "__main__":
     client = GoogleFlights()
     data = client.search()
-    with open('data.json','w') as f:
+    with open('data.json','w', encoding="utf-8") as f:
         f.write(data)
