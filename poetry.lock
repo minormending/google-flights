@@ -130,7 +130,7 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "protobuf2arr"
-version = "0.1.1"
+version = "0.1.4"
 description = "Translate a protobuf message to Google's RPC array format."
 category = "main"
 optional = false
@@ -332,8 +332,8 @@ protobuf = [
     {file = "protobuf-3.20.0.tar.gz", hash = "sha256:71b2c3d1cd26ed1ec7c8196834143258b2ad7f444efff26fdc366c6f5e752702"},
 ]
 protobuf2arr = [
-    {file = "protobuf2arr-0.1.1-py3-none-any.whl", hash = "sha256:ef311f5ff8a49b71f62b844cb59b00b2d7817b70860f9960a20e73c4ff5735a3"},
-    {file = "protobuf2arr-0.1.1.tar.gz", hash = "sha256:16a4797e4d46fcf4035eb63b2e1c36474c1a0a01641e1e3f6ee9e5202be4eaad"},
+    {file = "protobuf2arr-0.1.4-py3-none-any.whl", hash = "sha256:67987070331d1d4cca81ddc624534fa8873e9c5afc30f62adba572a12f0030b9"},
+    {file = "protobuf2arr-0.1.4.tar.gz", hash = "sha256:aab0fc58c33478997781248d9539ca1822db8515d9da09f80eac9efdf833c029"},
 ]
 requests = [
     {file = "requests-2.27.1-py2.py3-none-any.whl", hash = "sha256:f22fa1e554c9ddfd16e6e41ac79759e17be9e492b3587efa038054674760e72d"},
